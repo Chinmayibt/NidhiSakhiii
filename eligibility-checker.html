@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loan Eligibility Checker - Nidhisaki</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="features.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <header>
+      <div class="container">
+        <div class="logo">
+          <h1>Nidhisaki</h1>
+        </div>
+        <div class="language-selector">
+          <div class="selected-language">
+            <span id="current-language">English</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <ul class="language-dropdown">
+            <li data-lang="en" class="active">English</li>
+            <li data-lang="hi">हिंदी</li>
+            <li data-lang="ta">தமிழ்</li>
+            <li data-lang="te">తెలుగు</li>
+          </ul>
+        </div>
+        <div class="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="loan-types.html">Loan Types</a></li>
+            <li>
+              <a href="eligibility-checker.html" class="active"
+                >Eligibility Checker</a
+              >
+            </li>
+            <li><a href="chatbot.html">Chatbot</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <h1>Loan Eligibility Checker</h1>
+        <p>Find out if you qualify for a loan in just a few minutes</p>
+      </div>
+    </section>
+
+    <!-- Eligibility Checker Form -->
+    <section class="eligibility-checker">
+      <div class="container">
+        <div class="eligibility-container">
+          <div class="eligibility-steps">
+            <div class="step active" data-step="1">
+              <div class="step-number">1</div>
+              <div class="step-text">Personal Info</div>
+            </div>
+            <div class="step" data-step="2">
+              <div class="step-number">2</div>
+              <div class="step-text">Financial Details</div>
+            </div>
+            <div class="step" data-step="3">
+              <div class="step-number">3</div>
+              <div class="step-text">Loan Requirements</div>
+            </div>
+            <div class="step" data-step="4">
+              <div class="step-number">4</div>
+              <div class="step-text">Results</div>
+            </div>
+          </div>
+
+          <div class="eligibility-form-container">
+            <form id="eligibilityForm" class="eligibility-form">
+              <!-- Step 1: Personal Information -->
+              <div class="form-step active" data-step="1">
+                <h2>Personal Information</h2>
+                <div class="form-group">
+                  <label for="fullName">Full Name</label>
+                  <input type="text" id="fullName" name="fullName" required />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input type="email" id="email" name="email" required />
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" required />
+                </div>
+                <div class="form-group">
+                  <label for="age">Age</label>
+                  <input
+                    type="number"
+                    id="age"
+                    name="age"
+                    min="18"
+                    max="100"
+                    required
+                  />
+                </div>
+                <div class="form-buttons">
+                  <button type="button" class="next-btn">
+                    Next <i class="fas fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Step 2: Financial Details -->
+              <div class="form-step" data-step="2">
+                <h2>Financial Details</h2>
+                <div class="form-group">
+                  <label for="income">Monthly Income (₹)</label>
+                  <input
+                    type="number"
+                    id="income"
+                    name="income"
+                    min="0"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="employment">Employment Type</label>
+                  <select id="employment" name="employment" required>
+                    <option value="">Select Employment Type</option>
+                    <option value="salaried">Salaried</option>
+                    <option value="self-employed">Self-Employed</option>
+                    <option value="business">Business Owner</option>
+                    <option value="retired">Retired</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="experience">Work Experience (Years)</label>
+                  <input
+                    type="number"
+                    id="experience"
+                    name="experience"
+                    min="0"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="creditScore">Credit Score (if known)</label>
+                  <input
+                    type="number"
+                    id="creditScore"
+                    name="creditScore"
+                    min="300"
+                    max="900"
+                    placeholder="Leave blank if unknown"
+                  />
+                </div>
+                <div class="form-buttons">
+                  <button type="button" class="prev-btn">
+                    <i class="fas fa-arrow-left"></i> Previous
+                  </button>
+                  <button type="button" class="next-btn">
+                    Next <i class="fas fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Step 3: Loan Requirements -->
+              <div class="form-step" data-step="3">
+                <h2>Loan Requirements</h2>
+                <div class="form-group">
+                  <label for="loanType">Loan Type</label>
+                  <select id="loanType" name="loanType" required>
+                    <option value="">Select Loan Type</option>
+                    <option value="home">Home Loan</option>
+                    <option value="personal">Personal Loan</option>
+                    <option value="business">Business Loan</option>
+                    <option value="education">Education Loan</option>
+                    <option value="vehicle">Vehicle Loan</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="loanAmount">Loan Amount (₹)</label>
+                  <input
+                    type="number"
+                    id="loanAmount"
+                    name="loanAmount"
+                    min="10000"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="loanTenure">Loan Tenure (Years)</label>
+                  <input
+                    type="number"
+                    id="loanTenure"
+                    name="loanTenure"
+                    min="1"
+                    max="30"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="existingLoans"
+                    >Do you have any existing loans?</label
+                  >
+                  <div class="radio-group">
+                    <label>
+                      <input type="radio" name="existingLoans" value="yes" />
+                      Yes
+                    </label>
+                    <label>
+                      <input type="radio" name="existingLoans" value="no" /> No
+                    </label>
+                  </div>
+                </div>
+                <div class="form-buttons">
+                  <button type="button" class="prev-btn">
+                    <i class="fas fa-arrow-left"></i> Previous
+                  </button>
+                  <button type="button" id="checkEligibility" class="next-btn">
+                    Check Eligibility <i class="fas fa-check-circle"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Step 4: Results -->
+              <div class="form-step" data-step="4">
+                <div id="eligibilityResults" class="eligibility-results">
+                  <div class="result-loading">
+                    <div class="spinner"></div>
+                    <p>Analyzing your information...</p>
+                  </div>
+                  <div class="result-content" style="display: none">
+                    <!-- Results will be populated by JavaScript -->
+                  </div>
+                </div>
+                <div class="form-buttons">
+                  <button type="button" class="prev-btn">
+                    <i class="fas fa-arrow-left"></i> Previous
+                  </button>
+                  <button type="button" class="restart-btn">
+                    <i class="fas fa-redo"></i> Start Over
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chatbot Button -->
+    <div class="chatbot-widget">
+      <button class="chatbot-toggle">
+        <i class="fas fa-comment-dots"></i>
+        <span>Chat with us</span>
+      </button>
+      <div class="chatbot-container">
+        <div class="chatbot-header">
+          <h3>Nidhisaki Assistant</h3>
+          <button class="close-chat"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="chatbot-messages">
+          <div class="message bot">
+            <p>
+              👋 Hello! I'm your Nidhisaki loan assistant. How can I help you
+              today?
+            </p>
+          </div>
+        </div>
+        <div class="chatbot-input">
+          <input type="text" placeholder="Type your message here..." />
+          <button><i class="fas fa-paper-plane"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section about">
+            <h3>About Nidhisaki</h3>
+            <p>
+              Nidhisaki is your trusted partner for all loan-related decisions,
+              providing personalized recommendations and eligibility checks.
+            </p>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="footer-section links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="loan-types.html">Loan Types</a></li>
+              <li>
+                <a href="eligibility-checker.html">Eligibility Checker</a>
+              </li>
+              <li><a href="chatbot.html">Chatbot</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section contact">
+            <h3>Contact Us</h3>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> 123 Finance Street, Mumbai,
+              India
+            </p>
+            <p><i class="fas fa-phone"></i> +91 9876543210</p>
+            <p><i class="fas fa-envelope"></i> info@nidhisaki.com</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2023 Nidhisaki. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="eligibility.js"></script>
+  </body>
+</html>

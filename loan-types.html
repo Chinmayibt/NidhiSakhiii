@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loan Types - Nidhisaki</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="features.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <header>
+      <div class="container">
+        <div class="logo">
+          <h1>Nidhisaki</h1>
+        </div>
+        <div class="language-selector">
+          <div class="selected-language">
+            <span id="current-language">English</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <ul class="language-dropdown">
+            <li data-lang="en" class="active">English</li>
+            <li data-lang="hi">हिंदी</li>
+            <li data-lang="ta">தமிழ்</li>
+            <li data-lang="te">తెలుగు</li>
+          </ul>
+        </div>
+        <div class="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="loan-types.html" class="active">Loan Types</a></li>
+            <li><a href="eligibility-checker.html">Eligibility Checker</a></li>
+            <li><a href="chatbot.html">Chatbot</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <h1>Loan Types</h1>
+        <p>Explore our range of loan options tailored to your needs</p>
+      </div>
+    </section>
+
+    <!-- Loan Types Section -->
+    <section class="loan-types-section">
+      <div class="container">
+        <div class="loan-types-container">
+          <div class="loan-type-filters">
+            <button class="filter-btn active" data-filter="all">
+              All Loans
+            </button>
+            <button class="filter-btn" data-filter="personal">Personal</button>
+            <button class="filter-btn" data-filter="home">Home</button>
+            <button class="filter-btn" data-filter="business">Business</button>
+            <button class="filter-btn" data-filter="education">
+              Education
+            </button>
+            <button class="filter-btn" data-filter="vehicle">Vehicle</button>
+          </div>
+
+          <div class="loan-cards">
+            <!-- Personal Loan -->
+            <div class="loan-card" data-type="personal">
+              <div class="loan-card-header">
+                <div class="loan-icon">
+                  <i class="fas fa-user"></i>
+                </div>
+                <h3>Personal Loan</h3>
+              </div>
+              <div class="loan-card-body">
+                <div class="loan-details">
+                  <div class="loan-detail">
+                    <span class="detail-label">Interest Rate</span>
+                    <span class="detail-value">10.5% - 18%</span>
+                  </div>
+                  <div class="loan-detail">
+                    <span class="detail-label">Loan Amount</span>
+                    <span class="detail-value">₹50,000 - ₹25,00,000</span>
+                  </div>
+                  <div class="loan-detail">
+                    <span class="detail-label">Tenure</span>
+                    <span class="detail-value">1 - 5 years</span>
+                  </div>
+                  <div class="loan-detail">
+                    <span class="detail-label">Processing Fee</span>
+                    <span class="detail-value">1% - 3%</span>
+                  </div>
+                </div>
+                <p class="loan-description">
+                  Get quick funds for your personal needs without any
+                  collateral. Ideal for medical emergencies, travel, wedding, or
+                  home renovation.
+                </p>
+                <div class="loan-features">
+                  <div class="loan-feature">
+                    <i class="fas fa-check-circle"></i>
+                    <span>No collateral required</span>
+                  </div>
+                  <div class="loan-feature">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Quick approval</span>
+                  </div>
+                  <div class="loan-feature">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Minimal documentation</span>
+                  </div>
+                </div>
+              </div>
+              <div class="loan-card-footer">
+                <a href="eligibility-checker.html" class="btn btn-primary"
+                  >Check Eligibility</a
+                >
+                <a href="#" class="btn btn-secondary">Learn More</a>
+              </div>
+            </div>
+
+            <!-- Home Loan -->
+            <div class="loan-card" data-type="home">
+              <div class="loan-card-header">
+                <div class="loan-icon">
+                  <i class="fas fa-home"></i>
+                </div>
+                <h3>Home Loan</h3>
+              </div>
+              <div class="loan-card-body">
+                <div class="loan-details">
+                  <div class="loan-detail">
+                    <span class="detail-label">Interest Rate</span>
+                    <span class="detail-value">6.7% - 9.5%</span>
+                  </div>
+                  <div class="loan-detail">
+                    <span class="detail-label">Loan Amount</span>
+                    <span class="detail-value">Up to ₹5 crore</span>
+                  </div>
+                  <div class="loan-detail">
+                    <span class="detail-label">Tenure</span>
+                    <span class="detail-value">5 - 30 years</span>
+                  </div>
+                  <div class="loan-detail">
+                    <span class="detail-label">Processing Fee</span>
+                    <span class="detail-value">0.5% - 1%</span>
+                  </div>
+                </div>
+                <p class="loan-description">
+                  Realize your dream of owning a home with our competitive home
+                  loan options. Available for property purchase, construction,
+                  or renovation.
+                </p>
+                <div class="loan-features">
+                  <div class="loan-feature">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Attractive interest rates</span>
+                  </div>
+                  <div class="loan-feature">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Long repayment tenure</span>
+                  </div>
+                  <div class="loan-feature">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Tax benefits available</span>
+                  </div>
+                </div>
+              </div>
+              <div class="loan-card-footer">
+                <a href="eligibility-checker.html" class="btn btn-primary"
+                  >Check Eligibility</a
+                >
+                <a href="#" class="btn btn-secondary">Learn More</a>
+              </div>
+            </div>
+
+            <!-- Business Loan -->
+            <div class="loan-card" data-type="business">
+              <div class="loan-card-header">
+                <div class="loan-icon">
+                  <i class="fas fa-briefcase"></i>
+                </div>
+                <h3>Business Loan</h3>
+              </div>
+              <div class="loan-card-body">
+                <div class="loan-details">
+                  <div class="loan-detail">
+                    <span class="detail-label">Interest Rate</span>
+                    <span class="detail-value">11% - 16%</span>
+                  </div>
+                  <div class="loan-detail">
+                    <span class="detail-label">Loan Amount</span>
+                    <span class="detail-value">₹5,00,000 - ₹2 crore</span>
+                  </div>
+                  <div class="loan-detail">
+                    <span class="detail-label">Tenure</span>
+                    <span class="detail-value">1 - 7 years</span>
+                  </div>
+                  <div class="loan-detail">
+                    <span class="detail-label">Processing Fee</span>
+                    <span class="detail-value">1% - 2%</span>
+                  </div>
+                </div>
+                <p class="loan-description">
+                  Fuel your business growth with our flexible business loan
+                  options. Ideal for expansion, equipment purchase, or working
+                  capital needs.
+                </p>
+                <div class="loan-features">
+                  <div class="loan-feature">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Flexible repayment options</span>
+                  </div>
+                  <div class="loan-feature">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Minimal collateral requirements</span>
+                  </div>
+                  <div class="loan-feature">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Customized solutions</span>
+                  </div>
+                </div>
+              </div>
+              <div class="loan-card-footer">
+                <a href="eligibility-checker.html" class="btn btn-primary"
+                  >Check Eligibility</a
+                >
+                <a href="#" class="btn btn-secondary">Learn More</a>
+              </div>
+            </div>
+
+            <!-- Education Loan -->
+            <div class="loan-card" data-type="education">
+              <div class="loan-card-header">
+                <div class="loan-icon">
+                  <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3>Education Loan</h3>
+              </div>
+              <div class="loan-card-body">
+                <div class="loan-details">
+                  <div class="loan-detail">
+                    <span class="detail-label">Interest Rate</span>
+                    <span class="detail-value">7.5% - 11%</span>
+                  </div>
+                  <div class="loan-detail">
+                    <span class="detail-label">Loan Amount</span>
+                    <span class="detail-value">Up to ₹75,00,000</span>
+                  </div>
+                  <div class="loan-detail">
+                    <span class="detail-label">Tenure</span>
+                    <span class="detail-value">5 - 15 years</span>
+                  </div>
+                  <div class="loan-detail">
+                    <span class="detail-label">Processing Fee</span>
+                    <span class="detail-value">0.5% - 1%</span>
+                  </div>
+                </div>
+                <p class="loan-description">
+                  Invest in your future with our education loans. Covers tuition
+                  fees, living expenses, books, and equipment for studies in
+                  India or abroad.
+                </p>
+                <div class="loan-features">
+                  <div class="loan-feature">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Moratorium period during study</span>
+                  </div>
+                  <div class="loan-feature">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Tax benefits available</span>
+                  </div>
+                  <div class="loan-feature">
+                    <i class="fas fa-check-circle"></i>
+                    <span
+                      >Covers both domestic and international education</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="loan-card-footer">
+                <a href="eligibility-checker.html" class="btn btn-primary"
+                  >Check Eligibility</a
+                >
+                <a href="#" class="btn btn-secondary">Learn More</a>
+              </div>
+            </div>
+
+            <!-- Vehicle Loan -->
+            <div class="loan-card" data-type="vehicle">
+              <div class="loan-card-header">
+                <div class="loan-icon">
+                  <i class="fas fa-car"></i>
+                </div>
+                <h3>Vehicle Loan</h3>
+              </div>
+              <div class="loan-card-body">
+                <div class="loan-details">
+                  <div class="loan-detail">
+                    <span class="detail-label">Interest Rate</span>
+                    <span class="detail-value">7.5% - 12%</span>
+                  </div>
+                  <div class="loan-detail">
+                    <span class="detail-label">Loan Amount</span>
+                    <span class="detail-value">Up to ₹1 crore</span>
+                  </div>
+                  <div class="loan-detail">
+                    <span class="detail-label">Tenure</span>
+                    <span class="detail-value">1 - 7 years</span>
+                  </div>
+                  <div class="loan-detail">
+                    <span class="detail-label">Processing Fee</span>
+                    <span class="detail-value">0.5% - 1.5%</span>
+                  </div>
+                </div>
+                <p class="loan-description">
+                  Drive home your dream vehicle with our affordable vehicle
+                  loans. Available for new and pre-owned cars, two-wheelers, and
+                  commercial vehicles.
+                </p>
+                <div class="loan-features">
+                  <div class="loan-feature">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Quick approval process</span>
+                  </div>
+                  <div class="loan-feature">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Flexible repayment options</span>
+                  </div>
+                  <div class="loan-feature">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Up to 100% financing available</span>
+                  </div>
+                </div>
+              </div>
+              <div class="loan-card-footer">
+                <a href="eligibility-checker.html" class="btn btn-primary"
+                  >Check Eligibility</a
+                >
+                <a href="#" class="btn btn-secondary">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Loan Comparison Tool -->
+    <section class="loan-comparison-section">
+      <div class="container">
+        <h2 class="section-title">Loan Comparison Tool</h2>
+        <p class="section-description">
+          Compare different loan options side by side to find the best fit for
+          your needs
+        </p>
+
+        <div class="comparison-tool">
+          <div class="comparison-inputs">
+            <div class="comparison-input-group">
+              <label for="loanAmount">Loan Amount (₹)</label>
+              <input
+                type="range"
+                id="loanAmount"
+                min="50000"
+                max="5000000"
+                step="50000"
+                value="1000000"
+              />
+              <div class="range-value">
+                ₹<span id="loanAmountValue">10,00,000</span>
+              </div>
+            </div>
+            <div class="comparison-input-group">
+              <label for="loanTenure">Loan Tenure (Years)</label>
+              <input
+                type="range"
+                id="loanTenure"
+                min="1"
+                max="30"
+                step="1"
+                value="5"
+              />
+              <div class="range-value">
+                <span id="loanTenureValue">5</span> years
+              </div>
+            </div>
+            <button id="compareLoans" class="btn btn-primary">
+              Compare Loans
+            </button>
+          </div>
+
+          <div class="comparison-results">
+            <div class="comparison-table-container">
+              <table class="comparison-table">
+                <thead>
+                  <tr>
+                    <th>Loan Type</th>
+                    <th>Interest Rate</th>
+                    <th>Monthly EMI</th>
+                    <th>Total Interest</th>
+                    <th>Total Amount</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody id="comparisonTableBody">
+                  <!-- Will be populated by JavaScript -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chatbot Button -->
+    <div class="chatbot-widget">
+      <button class="chatbot-toggle">
+        <i class="fas fa-comment-dots"></i>
+        <span>Chat with us</span>
+      </button>
+      <div class="chatbot-container">
+        <div class="chatbot-header">
+          <h3>Nidhisaki Assistant</h3>
+          <button class="close-chat"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="chatbot-messages">
+          <div class="message bot">
+            <p>
+              👋 Hello! I'm your Nidhisaki loan assistant. How can I help you
+              today?
+            </p>
+          </div>
+        </div>
+        <div class="chatbot-input">
+          <input type="text" placeholder="Type your message here..." />
+          <button><i class="fas fa-paper-plane"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section about">
+            <h3>About Nidhisaki</h3>
+            <p>
+              Nidhisaki is your trusted partner for all loan-related decisions,
+              providing personalized recommendations and eligibility checks.
+            </p>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="footer-section links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="loan-types.html">Loan Types</a></li>
+              <li>
+                <a href="eligibility-checker.html">Eligibility Checker</a>
+              </li>
+              <li><a href="chatbot.html">Chatbot</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section contact">
+            <h3>Contact Us</h3>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> 123 Finance Street, Mumbai,
+              India
+            </p>
+            <p><i class="fas fa-phone"></i> +91 9876543210</p>
+            <p><i class="fas fa-envelope"></i> info@nidhisaki.com</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2023 Nidhisaki. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="loan-types.js"></script>
+  </body>
+</html>

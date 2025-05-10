@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Chatbot - Nidhisaki</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="features.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <header>
+      <div class="container">
+        <div class="logo">
+          <h1>Nidhisaki</h1>
+        </div>
+        <div class="language-selector">
+          <div class="selected-language">
+            <span id="current-language">English</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <ul class="language-dropdown">
+            <li data-lang="en" class="active">English</li>
+            <li data-lang="hi">हिंदी</li>
+            <li data-lang="ta">தமிழ்</li>
+            <li data-lang="te">తెలుగు</li>
+          </ul>
+        </div>
+        <div class="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="loan-types.html">Loan Types</a></li>
+            <li><a href="eligibility-checker.html">Eligibility Checker</a></li>
+            <li><a href="chatbot.html" class="active">Chatbot</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <h1>AI-Powered Loan Assistant</h1>
+        <p>Get instant answers to all your loan-related questions</p>
+      </div>
+    </section>
+
+    <!-- Chatbot Section -->
+    <section class="chatbot-section">
+      <div class="container">
+        <div class="chatbot-page-container">
+          <div class="chatbot-info">
+            <h2>Meet Your Personal Loan Assistant</h2>
+            <p>
+              Our AI-powered chatbot is designed to provide you with instant
+              answers to all your loan-related queries. Whether you're looking
+              for information about different loan types, eligibility criteria,
+              or application processes, our chatbot is here to help.
+            </p>
+
+            <div class="chatbot-features">
+              <div class="chatbot-feature">
+                <div class="feature-icon">
+                  <i class="fas fa-bolt"></i>
+                </div>
+                <div class="feature-text">
+                  <h3>Instant Responses</h3>
+                  <p>Get immediate answers to your questions without waiting</p>
+                </div>
+              </div>
+              <div class="chatbot-feature">
+                <div class="feature-icon">
+                  <i class="fas fa-language"></i>
+                </div>
+                <div class="feature-text">
+                  <h3>Multilingual Support</h3>
+                  <p>Communicate in your preferred language</p>
+                </div>
+              </div>
+              <div class="chatbot-feature">
+                <div class="feature-icon">
+                  <i class="fas fa-brain"></i>
+                </div>
+                <div class="feature-text">
+                  <h3>Smart Recommendations</h3>
+                  <p>
+                    Receive personalized loan suggestions based on your needs
+                  </p>
+                </div>
+              </div>
+              <div class="chatbot-feature">
+                <div class="feature-icon">
+                  <i class="fas fa-clock"></i>
+                </div>
+                <div class="feature-text">
+                  <h3>24/7 Availability</h3>
+                  <p>Get assistance anytime, day or night</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="chatbot-interface">
+            <div class="chatbot-header">
+              <div class="chatbot-avatar">
+                <i class="fas fa-robot"></i>
+              </div>
+              <div class="chatbot-title">
+                <h3>Nidhisaki Assistant</h3>
+                <span class="status online">Online</span>
+              </div>
+              <div class="chatbot-actions">
+                <button class="clear-chat" title="Clear Chat">
+                  <i class="fas fa-trash"></i>
+                </button>
+              </div>
+            </div>
+            <div class="chatbot-messages" id="fullChatMessages">
+              <div class="message bot">
+                <div class="message-avatar">
+                  <i class="fas fa-robot"></i>
+                </div>
+                <div class="message-content">
+                  <p>
+                    👋 Hello! I'm your Nidhisaki loan assistant. How can I help
+                    you today?
+                  </p>
+                  <span class="message-time">Just now</span>
+                </div>
+              </div>
+              <div class="message bot">
+                <div class="message-avatar">
+                  <i class="fas fa-robot"></i>
+                </div>
+                <div class="message-content">
+                  <p>
+                    You can ask me about loan types, eligibility criteria,
+                    interest rates, or application processes.
+                  </p>
+                  <span class="message-time">Just now</span>
+                </div>
+              </div>
+              <div class="suggested-questions">
+                <button class="question-chip">
+                  What loan types do you offer?
+                </button>
+                <button class="question-chip">
+                  How do I check my eligibility?
+                </button>
+                <button class="question-chip">
+                  What are the current interest rates?
+                </button>
+                <button class="question-chip">
+                  How long does approval take?
+                </button>
+              </div>
+            </div>
+            <div class="chatbot-input">
+              <input
+                type="text"
+                id="fullChatInput"
+                placeholder="Type your message here..."
+              />
+              <button id="fullChatSend">
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-container">
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>What types of loans does Nidhisaki offer?</h3>
+              <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Nidhisaki offers a variety of loan types including Home Loans,
+                Personal Loans, Business Loans, Education Loans, and Vehicle
+                Loans. Each loan type has different eligibility criteria,
+                interest rates, and repayment terms.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>How do I check my loan eligibility?</h3>
+              <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                You can check your loan eligibility by using our Eligibility
+                Checker tool. Simply provide your personal and financial
+                details, and we'll instantly assess your eligibility for
+                different loan types. Alternatively, you can ask our chatbot for
+                a quick eligibility assessment.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>What documents are required for loan application?</h3>
+              <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                The required documents typically include identity proof
+                (Aadhaar, PAN card), address proof, income proof (salary slips,
+                ITR), bank statements, and employment details. Specific
+                requirements may vary based on the loan type and amount.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>How long does the loan approval process take?</h3>
+              <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                The loan approval process typically takes 2-7 business days,
+                depending on the loan type, amount, and verification process.
+                Pre-approved loans may be processed faster, sometimes within 24
+                hours.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Can I repay my loan before the tenure ends?</h3>
+              <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Yes, you can repay your loan before the tenure ends. However,
+                some loans may have prepayment penalties or charges. It's
+                advisable to check the prepayment terms before taking a loan.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section about">
+            <h3>About Nidhisaki</h3>
+            <p>
+              Nidhisaki is your trusted partner for all loan-related decisions,
+              providing personalized recommendations and eligibility checks.
+            </p>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="footer-section links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="loan-types.html">Loan Types</a></li>
+              <li>
+                <a href="eligibility-checker.html">Eligibility Checker</a>
+              </li>
+              <li><a href="chatbot.html">Chatbot</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section contact">
+            <h3>Contact Us</h3>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> 123 Finance Street, Mumbai,
+              India
+            </p>
+            <p><i class="fas fa-phone"></i> +91 9876543210</p>
+            <p><i class="fas fa-envelope"></i> info@nidhisaki.com</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2023 Nidhisaki. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="chatbot.js"></script>
+  </body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nidhisaki - Your Smart Partner for Easy Loan Decisions</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <header>
+      <div class="container">
+        <div class="logo">
+          <h1>Nidhisaki</h1>
+        </div>
+        <div class="language-selector">
+          <div class="selected-language">
+            <span id="current-language">English</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <ul class="language-dropdown">
+            <li data-lang="en" class="active">English</li>
+            <li data-lang="hi">हिंदी</li>
+            <li data-lang="ta">தமிழ்</li>
+            <li data-lang="te">తెలుగు</li>
+          </ul>
+        </div>
+        <div class="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Loan Types</a></li>
+            <li><a href="#">Eligibility Checker</a></li>
+            <li><a href="#">Chatbot</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-background-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+      </div>
+      <div class="hero-content">
+        <h1 class="animate-text">Your Smart Partner for Easy Loan Decisions</h1>
+        <p class="animate-text delay-1">
+          Get personalized loan recommendations and check your eligibility in
+          minutes
+        </p>
+        <a
+          href="eligibility-checker.html"
+          class="cta-button animate-text delay-2"
+          >Check Loan Eligibility</a
+        >
+      </div>
+      <div class="hero-image">
+        <img
+          src="https://images.unsplash.com/photo-1579621970795-87facc2f976d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+          alt="Financial planning"
+          class="floating-image"
+        />
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+      <div class="container">
+        <h2 class="section-title">Our Features</h2>
+        <div class="features-grid">
+          <div class="feature-card" data-aos="fade-up">
+            <div class="feature-icon">
+              <i class="fas fa-robot"></i>
+            </div>
+            <h3>AI-Powered Chatbot</h3>
+            <p>
+              Get instant answers to your loan queries with our intelligent
+              chatbot assistant
+            </p>
+          </div>
+          <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="feature-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h3>Loan Comparison</h3>
+            <p>
+              Compare different loan options side by side to find the best rates
+              and terms
+            </p>
+          </div>
+          <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="feature-icon">
+              <i class="fas fa-language"></i>
+            </div>
+            <h3>Multilingual Support</h3>
+            <p>
+              Access our services in multiple languages including English,
+              Hindi, Tamil, and Telugu
+            </p>
+          </div>
+          <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="feature-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3>Secure Document Handling</h3>
+            <p>
+              Your documents are encrypted and securely stored with bank-level
+              security
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+      <div class="container">
+        <h2 class="section-title">What Our Clients Say</h2>
+        <div class="testimonial-slider">
+          <div class="testimonial-container">
+            <div class="testimonial active">
+              <div class="testimonial-content">
+                <p>
+                  "Nidhisaki helped me find the perfect home loan with the
+                  lowest interest rate. The process was smooth and hassle-free!"
+                </p>
+                <div class="testimonial-author">
+                  <div class="author-info">
+                    <h4>Priya Sharma</h4>
+                    <p>Home Loan Customer</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial">
+              <div class="testimonial-content">
+                <p>
+                  "The multilingual support was a game-changer for my parents
+                  who aren't comfortable with English. They could understand
+                  everything in Tamil!"
+                </p>
+                <div class="testimonial-author">
+                  <div class="author-info">
+                    <h4>Karthik Rajan</h4>
+                    <p>Personal Loan Customer</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial">
+              <div class="testimonial-content">
+                <p>
+                  "The AI chatbot answered all my questions instantly. I didn't
+                  have to wait for customer service to get back to me. Highly
+                  recommend!"
+                </p>
+                <div class="testimonial-author">
+                  <div class="author-info">
+                    <h4>Amit Patel</h4>
+                    <p>Business Loan Customer</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-controls">
+            <button class="prev-btn">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="testimonial-dots">
+              <span class="dot active" data-slide="0"></span>
+              <span class="dot" data-slide="1"></span>
+              <span class="dot" data-slide="2"></span>
+            </div>
+            <button class="next-btn">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chatbot Button -->
+    <div class="chatbot-widget">
+      <button class="chatbot-toggle">
+        <i class="fas fa-comment-dots"></i>
+        <span>Chat with us</span>
+      </button>
+      <div class="chatbot-container">
+        <div class="chatbot-header">
+          <h3>Nidhisaki Assistant</h3>
+          <button class="close-chat"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="chatbot-messages">
+          <div class="message bot">
+            <p>
+              👋 Hello! I'm your Nidhisaki loan assistant. How can I help you
+              today?
+            </p>
+          </div>
+        </div>
+        <div class="chatbot-input">
+          <input type="text" placeholder="Type your message here..." />
+          <button><i class="fas fa-paper-plane"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section about">
+            <h3>About Nidhisaki</h3>
+            <p>
+              Nidhisaki is your trusted partner for all loan-related decisions,
+              providing personalized recommendations and eligibility checks.
+            </p>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="footer-section links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Loan Types</a></li>
+              <li><a href="#">Eligibility Checker</a></li>
+              <li><a href="#">Chatbot</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section contact">
+            <h3>Contact Us</h3>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> 123 Finance Street, Mumbai,
+              India
+            </p>
+            <p><i class="fas fa-phone"></i> +91 9876543210</p>
+            <p><i class="fas fa-envelope"></i> info@nidhisaki.com</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2023 Nidhisaki. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
